@@ -7,11 +7,11 @@ const ctx = canvas.getContext("2d");
 const CANVAS_WIDTH = (canvas.width = 600);
 const CANVAS_HEIGHT = (canvas.height = 600);
 const playerImage = new Image();
-playerImage.src = "./assests/shadow_dog.png";
+playerImage.src = "../assests/shadow_dog.png";
 const spriteWidth = 575;
 const spriteHeight = 523;
 let gameFrame = 0;
-let playerState = "sit";
+let playerState = "idle";
 const staggerFrames = 5;
 const spriteAnimations = [];
 const animationStates = [
@@ -38,7 +38,7 @@ animationStates.forEach((item, index) => {
   }
   spriteAnimations[item.name] = frames;
 });
-console.log(spriteAnimations);
+//console.log(spriteAnimations);
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   let position =
