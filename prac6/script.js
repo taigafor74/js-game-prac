@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.enemyTypes = ["worm", "ghost", "spider"];
       this.enemies = [];
       this.#addNewEnemy();
-      this.enemyInterval = 100;
+      this.enemyInterval = 300;
       this.enemtTimer = 0;
     }
     update(deltaTime) {
@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
       this.vx = Math.random() * 0.1 + 0.1;
     }
   }
-
   class Ghost extends Enemy {
     constructor(game) {
       super(game);
